@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EvaluateEquations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YyI-ra-ETP"/>
+                        <viewControllerLayoutGuide type="bottom" id="4h9-Y9-iBS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpI-xi-paf" userLabel="InputView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XfB-dc-28H" userLabel="OutputView">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOD-ns-ggb">
+                                <rect key="frame" x="120" y="587" width="135" height="30"/>
+                                <state key="normal" title="Evaluate"/>
+                                <connections>
+                                    <action selector="evaluate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="saH-8R-F8d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XfB-dc-28H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6ag-CS-NxI"/>
+                            <constraint firstItem="qpI-xi-paf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Vz-5d-H1F"/>
+                            <constraint firstAttribute="trailing" secondItem="WOD-ns-ggb" secondAttribute="trailing" constant="120" id="OFh-jJ-P0Y"/>
+                            <constraint firstItem="qpI-xi-paf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="SJE-qU-p3b"/>
+                            <constraint firstItem="WOD-ns-ggb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="ac6-HU-LYO"/>
+                            <constraint firstItem="XfB-dc-28H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bXg-7i-U0G"/>
+                            <constraint firstItem="qpI-xi-paf" firstAttribute="top" secondItem="YyI-ra-ETP" secondAttribute="bottom" id="gmx-ZH-41M"/>
+                            <constraint firstItem="4h9-Y9-iBS" firstAttribute="top" secondItem="XfB-dc-28H" secondAttribute="bottom" id="jVX-lH-Mm6"/>
+                            <constraint firstItem="qpI-xi-paf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lV5-dL-ERf"/>
+                            <constraint firstItem="4h9-Y9-iBS" firstAttribute="top" secondItem="WOD-ns-ggb" secondAttribute="bottom" constant="50" id="vgn-qp-ja5"/>
+                            <constraint firstItem="XfB-dc-28H" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="wJ4-7f-5yW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="equationsView" destination="qpI-xi-paf" id="jjf-Ya-QeQ"/>
+                        <outlet property="outputView" destination="XfB-dc-28H" id="9TS-Rg-WIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
