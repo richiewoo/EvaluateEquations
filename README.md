@@ -1,4 +1,4 @@
-# EvaluateEquations
+# Evaluate Equations
 This codes aim to evaluate a set of equations, each specified on separate line. An equation is defined by:
 
 LHS = RHS
