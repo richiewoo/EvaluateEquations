@@ -1,7 +1,7 @@
 # Evaluate Equations
 This codes aim to evaluate a set of equations, each specified on separate line. An equation is defined by:
 
-LHS = RHS
+# LHS = RHS
 
 LHS is the left-hand side of the equation and is always a variable name. A variable name can only be composed of letters from the alphabet(e.g. for which Character.isLetterOrDigit(c) == true).
 
